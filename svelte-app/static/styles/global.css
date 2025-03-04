@@ -1,7 +1,8 @@
 :root {
 --primary-color: #6e6e9b;
---secondary-color: #9d9dc7;
+--secondary-color: #b8b8db;
 --text-color: #e0e5e9;
+--text-dark: #100b07;
 --link-color: #bd67c5;
 --link-hover-color: #da88e0;
 --background-dark: navy;
@@ -53,9 +54,21 @@ a:hover{
     padding: var(--spacing-medium);
 }
 
+#tos-text{
+    width: 90%;
+    position: fixed;
+    left: 5%;
+    height:max-content;
+    padding-bottom: 15px;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+}
+
 a.form-submit {
     padding: 1px 6px;
     border-radius: 3px;
+    position:fixed;
+    right:5%;
     color: var(--text-color);
     background-color: var(--primary-color);
     text-decoration: none;
