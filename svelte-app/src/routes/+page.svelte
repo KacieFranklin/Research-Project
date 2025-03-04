@@ -8,6 +8,6 @@
 <a href="/questions">FAQ Page</a><br>
 <a href="/news">Blog/News Page</a><br>
 
-<div style="position:fixed;bottom:0;">
+<div style="position:fixed;bottom:0;background-color:#3365">
 <a href="https://svelte.dev/docs/kit">Svelte Documentation</a><br>
 </div>
