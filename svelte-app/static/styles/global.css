@@ -47,3 +47,10 @@ a:hover{
     margin: 0 auto;
     padding: var(--spacing-medium);
 }
+
+a.form-submit {
+    padding: 1px 6px;
+    border-radius: 3px;
+    background-color: darkgrey;
+    text-decoration: none;
+}
