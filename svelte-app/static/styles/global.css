@@ -67,8 +67,9 @@ a:hover{
 a.form-submit {
     padding: 1px 6px;
     border-radius: 3px;
-    position:fixed;
-    right:5%;
+    position:relative;
+    right:calc(calc-size(padding-right, size) - 50%);
+    top:15px;
     color: var(--text-color);
     background-color: var(--primary-color);
     text-decoration: none;
