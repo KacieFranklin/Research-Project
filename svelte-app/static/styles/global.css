@@ -24,6 +24,17 @@ html {
     background-image: linear-gradient(to bottom, var(--background-dark), var(--background-light));
 }
 
+nav {
+    width: 80%;
+    text-align: left;
+    background-color: red;
+}
+
+nav.link {
+    display: inline-flex;
+    background-color: blue;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--base-font-size);
