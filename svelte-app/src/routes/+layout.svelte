@@ -4,13 +4,14 @@
 
 <header>
     <nav>
-        <div class="link"><a href="/">Home</a></div>
-        <div class="link"><a href="/">Home</a></div>
-            <li><a href="/">Contact Us</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">News</a></li>
-            <li><a href="/">Products</a></li>
-            <li><a href="/">Questions</a></li>
+        <span><a href="/">Home</a></span>
+        <span><a href="/">Home</a></span>
+        <span><a href="/">Contact Us</a></span>
+        <span><a href="/">About</a></span>
+        <span><a href="/">News</a></span>
+        <span><a href="/">Products</a></span>
+        <span><a href="/">Questions</a></span>
+        <span><a href="/">Questions</a></span>
     </nav>
 </header>
 
