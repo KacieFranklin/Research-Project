@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Homepage</title>
+</svelte:head>
+
 <h1>Homepage</h1>
 <a href="/about">About Page</a><br>
 <a href="/dynamic">Main Page</a><br>

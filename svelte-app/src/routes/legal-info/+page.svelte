@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Legal-Info</title>
+</svelte:head>
+
 <h1>This is the Terms of Service Page</h1>
 <div id="tos-text">
 <h2>Terms of Service</h2>

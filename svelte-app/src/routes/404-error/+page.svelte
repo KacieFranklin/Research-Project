@@ -1,2 +1,6 @@
-<h1>This is the 404 Error Page</h1>
+<svelte:head>
+    <title>404-error</title>
+</svelte:head>
+
+<h1>Error: Page Not Found</h1>
 <a href="/">Home</a><br>
