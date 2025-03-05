@@ -4,6 +4,7 @@
 --text-color: #e0e5e9;
 --text-dark: #100b07;
 --special-color: #ad37d4;
+--special-color-semi-trans: #ad37d4b0;
 --special-light: #da88e0;
 --special-dark: #526;
 --semi-transparent-div: #446b;
@@ -29,14 +30,12 @@ html {
 nav {
     overflow-x:scroll;
     white-space:nowrap;
-    width:80%;
-    scrollbar-color: var(--special-color) #0000;
-    scrollbar-width: thin;
+    width:100%;
     position:fixed;
-    padding:10px 20px 10px 20px;
-    left:10%;
+    padding:10px 20px 5px 20px;
     text-align:left;
     background-color:var(--semi-transparent-div);
+    z-index:6;
 }
 
 nav span:not(:last-child) {
@@ -44,13 +43,39 @@ nav span:not(:last-child) {
     border-right: solid black 1px;
 }
 
+@supports (scrollbar-color: auto) {
+    nav {
+        scrollbar-color:var(--special-color), #0000;
+    }
+}
+
+@supports selector(::-webkit-scrollbar) {
+    nav::-webkit-scrollbar {
+        height:10px;
+        background: #0000;
+    }
+    nav::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: var(--special-color-semi-trans);
+    }
+    nav::-webkit-scrollbar-thumb:hover {
+        background-color: var(--special-color);
+    }
+}
+
 body {
     font-family: var(--font-family);
     font-style: var(--font-style);
     font-size: var(--base-font-size);
     color:var(--text-color);
-    text-align: center;
     line-height: 1.5;
+}
+
+div#page-content {
+    display: block;
+    position:relative;
+    text-align: center;
+    z-index:2;
 }
 
 h1, h2, h3, h4, h5, h6 {
