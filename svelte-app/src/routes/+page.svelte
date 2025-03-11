@@ -17,4 +17,8 @@
     <div style="position:fixed;bottom:0;background-color:#446">
         <a href="https://svelte.dev/docs/kit">Svelte Documentation</a><br>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Art Website. All rights reserved</p>
+    </footer>
 </div>

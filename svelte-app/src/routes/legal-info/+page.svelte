@@ -8,5 +8,13 @@
         <h2>Terms of Service</h2>
         <p>By using this website, you agree to forfeit your rights to reproduction of images created via this website.<br></p>
         <a href="/" class="form-submit">Accept</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <footer>
+            <p>&copy; 2025 Art Website. All rights reserved</p>
+        </footer>
     </div>
 </div>
