@@ -8,6 +8,23 @@
 <h2>How Does it Work?</h2>
 <p>Visit our <a href="/questions">FAQ Page</a> to learn how the tool works<br></p>
 <p>And visit our <a href="/about">About section</a> to learn about us too<br></p>
+
+<!-- temp button for debug -->
+<button on:click={clearData}>Clear localStorage</button> 
+
+<script>
+    function onload() {
+        if (localStorage.getItem("stored_data") == null) {
+            window.location.href = "/legal-info";
+            localStorage.setItem("stored_data", "True");
+        }
+    }
+    function clearData() {
+        localStorage.removeItem("stored_data");
+    }
+    onload();
+</script>
+
 <h1><br><a href="/dynamic">Start Drawing!</a><br></h1>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
