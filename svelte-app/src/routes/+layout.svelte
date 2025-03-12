@@ -15,3 +15,7 @@
 
 
 {@render children()}
+
+<footer>
+    <p>2025 Art Website. All rights reserved</p>
+</footer>

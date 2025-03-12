@@ -33,6 +33,7 @@ nav {
     width:100%;
     height:49px;
     position:fixed;
+    top:0;
     padding:10px 20px 5px 20px;
     text-align:left;
     background-image: linear-gradient(var(--semi-transparent-div) 20%, var(--primary-color) 80%);
@@ -60,6 +61,7 @@ div#page-content {
     height:100vh;
     width:100%;
     padding-top:50px;
+    padding-bottom:50px;
     overflow:hidden scroll;
     background-image: linear-gradient(165deg, var(--background-dark) 10%, var(--background-transition) 90%, var(--background-light));
 }
@@ -125,10 +127,13 @@ a:hover{
 
 #tos-text{
     width: 90%;
-    position: fixed;
-    left: 5%;
-    height:max-content;
+    position: absolute;
+    bottom:50px;
+    margin-left: 5%;
+    margin-right: 5%;
     padding-bottom: 15px;
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
     color: var(--text-dark);
     background-color: var(--secondary-color);
 }
@@ -148,7 +153,8 @@ footer{
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
-    padding: 1rem;
+    height: 45px;
+    padding-top: 10px;
     position:fixed;
     bottom:0;
     width:100%;
