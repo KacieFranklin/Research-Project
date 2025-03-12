@@ -12,7 +12,3 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <p>there's text down here</p>
-
-<div style="position:fixed;bottom:0;background-color:#446;z-index:8">
-    <a href="https://svelte.dev/docs/kit">Svelte Documentation</a><br>
-</div>

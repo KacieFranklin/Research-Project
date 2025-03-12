@@ -17,5 +17,8 @@
 {@render children()}
 
 <footer>
+    <div style="position:fixed;bottom:45px;background-color:#446;z-index:8">
+        <a href="https://svelte.dev/docs/kit">Svelte Documentation</a><br>
+    </div>
     <p>2025 Art Website. All rights reserved</p>
 </footer>
