@@ -13,6 +13,9 @@
     <span><a href="/404-error">4̷͈̚0̶̩̫͂͝4̶̯̽̈́ͅ-̷̛͎̃p̸͔͒ḁ̴̢̉̋g̵͔̏e̵͙̣̽̐</a></span>
 </nav>
 
+<!-- svelte-ignore a11y_invalid_attribute -->
+<a href="javascript:window.history.back()">Go Back</a>
+
 {@render children()}
 
 <footer>
