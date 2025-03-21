@@ -40,6 +40,14 @@ nav {
     z-index:6;
 }
 
+canvas#sample {
+    width: 80%;
+    height: 40%;
+    position: relative;
+    border: 1px dashed black;
+    background-color: white;
+}
+
 nav span:not(:last-child) {
     padding: 5px 5px 5px 0px;
     border-right: solid black 1px;
