@@ -7,7 +7,7 @@
 <p><a href="mailto:C00299407@setu.ie"> Kacie Franklin: C00299407@setu.ie</a></p><br>
 <p><a href="mailto:C00297034@setu.ie"> Cialan Patterson: C00297034@setu.ie</a></p><br>
 <p><a href="mailto:C00297358@setu.ie"> Robert Iova: C00297358@setu.ie</a></p><br>
-<a href="/">Home</a><br>
+<a href="/home">Home</a><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
