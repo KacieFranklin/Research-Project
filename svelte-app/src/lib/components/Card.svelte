@@ -17,40 +17,40 @@
 <style>
     
 
-:global(.gallery > .card:first-child) {
-    border: 3px solid gold;
-}
+    :global(.gallery > .card:first-child) {
+        border: 5px solid gold;
+        box-shadow: 10px 10px 5px rgb(240, 128, 240);
+    }
 
-:global(.gallery > .card:last-child) {
-    border: 3px solid crimson;
-}
+    :global(.gallery > .card:not(:first-child):not(:last-child)) {
+        border: 5px solid cyan;
+        box-shadow: 10px 10px 5px rgb(240, 128, 240);
+    }
 
-:global(.gallery > .card:nth-child(even)) {
-    background-color: #ebebeb;
-}
+    :global(.gallery > .card:last-child) {
+        border: 5px solid crimson;
+        box-shadow: 10px 10px 5px rgb(240, 128, 240);
+    }
 
-:global(.gallery > .card:hover) {
-    transform: scale(1.1);
-    z-index: 2;
-}
+    :global(.gallery > .card:hover) {
+        transform: scale(1.5);
+        box-shadow: 10px 10px rgb(240, 128, 240);
+        z-index: 2;
+    }
 
-:global(.gallery > .card:hover ~ .card) {
-    transform:scale(0.9);
-    opacity: 0.8;
-}
+    :global(.gallery > .card:hover ~ .card) {
+        transform:scale(0.9);
+        opacity: 0.8;
+    }
 
-:global(.gallery > .card:hover + .card) {
-    transform: scale(0.95);
-    opacity: 0.9;
-}
-
-:global(.gallery > .card:not(:first-child):not(:last-child)) {
-    border-radius: 18px;
-}
+    :global(.gallery > .card:hover + .card) {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
 
     .card{
-        background:white;
-        border-radius: 10px;
+        background:#21213c;
+        border-radius: 18px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         overflow:hidden;
         width:280px;
@@ -75,12 +75,13 @@
 
     .content p {
         font-size: 1rem;
-        color: #555;
+        color: #e0e5e9;
     }
 
     .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 15px 15px  rgb(240, 128, 240);
     }
 
     .content h2::before {
@@ -88,7 +89,7 @@
         display:block;
         width:40%;
         height:2px;
-        background: #007bff;
+        background: #da88e0;
         margin: 0 auto 10px auto;
         transition: width 0.3s ease-in-out;
     }
@@ -96,5 +97,4 @@
     .card:hover .content h2::before {
         width: 80%;
     }
-
 </style>

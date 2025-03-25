@@ -225,6 +225,7 @@ body {
 .gallery {
     display:flex;
     flex-wrap: wrap;
+    color:var(--text-color);
     gap: 20px;
     justify-content: center;
     margin-top: 2rem;
