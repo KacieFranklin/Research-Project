@@ -1,5 +1,5 @@
 <script>
-    import { Navigation, Footer } from "$lib";
+    import { Navigation, Footer, } from "$lib";
     let { children } = $props();
 </script>
 
