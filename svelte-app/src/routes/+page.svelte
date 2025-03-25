@@ -9,35 +9,20 @@
 <p>Visit our <a href="/questions">FAQ Page</a> to learn how the tool works<br></p>
 <p>And visit our <a href="/about">About section</a> to learn about us too<br></p>
 
+<!-- TEST -->
+<p>{data.sample}</p>
+
 <!-- temp button for debug -->
-<button on:click={clearData}>Clear localStorage</button> 
+<!--<button on:click={clearData}>Clear localStorage</button>--> 
 
 <script>
-    function onload() {
-        localStorage.setItem("stored_data", "first"); //TEST
-        if (localStorage.getItem("stored_data") == null) {
-            window.location.href = "/legal-info";
-            localStorage.setItem("stored_data", "first");
-        }
-        else if (localStorage.getItem("stored_data") == "first") {
-            //localStorage.setItem("stored_data", "returning"); //TEST
-        }
-        else {
-            window.location.href = "/dynamic";
-        }
-    }
-    function clearData() {
-        localStorage.removeItem("stored_data");
-    }
-    onload();
-
-    import { CanvasElement } from "$lib";
-    let c;
+    /** @type {import('./$types').PageProps} */
+    let { data } = $props();
 </script>
 
 <h1><br><a href="/dynamic">Start Drawing!</a><br></h1>
 <br><br><br>
-<canvas bind:this={c}></canvas>
+<canvas class="sample">{@html data.canvas}</canvas>
 <br><br><br>
 <br><br><br>
 <br><br><br>
