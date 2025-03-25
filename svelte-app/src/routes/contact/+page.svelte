@@ -7,7 +7,7 @@
 </script>
 
 <h1>This is the Contact page</h1>
-<p>If you would like to contact us, below is how you can get in touch with us for any inquires or issues you may be having.</p>
+<p>If you would like to contact us, below is how you can get in touch with us for any inquires or issues you may be having with any pages.</p>
 <a href="/">Home</a><br>
 
 
@@ -17,7 +17,4 @@
     <Card photo="Cialan.png" link="mailto:C00297034@setu.ie" title="Cialan Patterson" description="Responsible for the Homepage, Drawing Tool Page and Error Page."/>
     <Card photo="Robert.png" link="mailto:C00297358@setu.ie" title="Robert Iovu" description="Responsible for the About Page, Blog/News Page and FAQ Page."/>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<p>text</p>
+<br>

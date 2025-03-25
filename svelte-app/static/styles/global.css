@@ -188,6 +188,7 @@ body {
         height:max-content;
         max-height: 40vh;
     }
+    
     .burger {
         display:block;
         left:90%;
@@ -207,9 +208,6 @@ body {
         max-height: fit-content;
         padding: 1rem 5px 1rem 5px;
         overflow-y: auto;
-        /*
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        */
     }
 
     .hamburger-menu ul.open {
@@ -230,5 +228,6 @@ body {
     justify-content: center;
     margin-top: 2rem;
 }
+
 
 
