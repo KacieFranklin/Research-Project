@@ -233,5 +233,45 @@ a.form-submit {
     margin-top: 2rem;
 }
 
+/*
+.icon-imgs{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: left;
+    margin-top: 2rem;
+    overflow: hidden;
+}*/
+
+.brush-img{
+     width:200px;
+    height:200px;
+    float:left;
+    display:block;
+    background-color: var(--primary-color);
+    margin: auto;
+   
+    
+}
+    /*background-color: var(--primary-color);
+
+
+.eraser-img{
+    background-color: var(--primary-color);
+}
+
+.lasso-img{
+    background-color: var(--primary-color);
+}
+
+.drag-img{
+    background-color: var(--primary-color);
+}
+
+.cut-img{
+    background-color: var(--primary-color);
+}
+
+
 
 
