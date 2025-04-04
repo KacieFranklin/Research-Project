@@ -233,45 +233,35 @@ a.form-submit {
     margin-top: 2rem;
 }
 
-/*
-.icon-imgs{
-    display:flex;
-    flex-wrap: wrap;
-    gap:20px;
-    justify-content: left;
-    margin-top: 2rem;
-    overflow: hidden;
-}*/
-
-.brush-img{
-     width:200px;
-    height:200px;
-    float:left;
+li.tool-icon {
+    width:25%;
+    max-width:fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 5px dashed var(--special-color);
     display:block;
     background-color: var(--primary-color);
-    margin: auto;
-   
-    
+    position: relative;
+    left:600px;
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
 }
-    /*background-color: var(--primary-color);
 
-
-.eraser-img{
+li.tool-icon:hover{
+    box-shadow:1px 1px 40px rgb(240, 128, 240);
+}
+/*
+.Tool-shortcut {
+    float: inline-start;
+    position: relative;
+    bottom: 1110px;
+    left:850px;
+    border: 5px dashed var(--special-color);
+    display:inline;
     background-color: var(--primary-color);
+    margin-block: 20px;
+    margin-right: 30px;
+    max-width: 25%;
+    vertical-align:top;
 }
-
-.lasso-img{
-    background-color: var(--primary-color);
-}
-
-.drag-img{
-    background-color: var(--primary-color);
-}
-
-.cut-img{
-    background-color: var(--primary-color);
-}
-
-
-
-
+*/
