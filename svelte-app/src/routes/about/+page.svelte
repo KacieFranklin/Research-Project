@@ -3,88 +3,107 @@
 </svelte:head>
 
 <a href="/home">Home</a><script>
-    import { fade, fly } from "svelte/transition";
-  
-    let companyName = "Us";
-  </script>
-  
-  <section class="about">
-    <h1 transition:fade>About {companyName}</h1>
-    <p transition:fade>
-      We make images come alive! With our <strong>parallax tool</strong>, you can add depth and motion 
-      to your visuals—no coding needed.
-    </p>
-  
-    <h2 transition:fly={{ y: 20, duration: 500 }}>How It Works</h2>
-    <p transition:fade>
-      Just upload an image, tweak the layers, and let the parallax effect do its thing. 
-      Simple, fast, and fun!
-    </p>
-  
-    <h2 transition:fly={{ y: 20, duration: 500 }}>Why Use It?</h2>
-    <ul>
-      <li transition:fade>🚀 Easy to use—no tech skills required</li>
-      <li transition:fade>⚡ Lightweight & smooth animations</li>
-      <li transition:fade>🎨 Customizable to fit your style</li>
-    </ul>
-  
-    <p transition:fade>
-      Whether you're a designer, developer, or just want cool effects, {companyName} makes 
-      it easy to create <strong>epic visuals</strong>. ✨
-    </p>
-  </section>
-  
-  <style>
+  import { fade } from 'svelte/transition';
+</script>
+
+<section class="about" in:fade={{ duration: 400 }}>
+  <h1>👋 About Us</h1>
+  <p class="intro">
+    We're building a tool that helps you make super clean, animated visuals for your website — without needing to code a thing.
+  </p>
+
+  <div class="content">
+    <div class="content-item">
+      <h2>✨ What It Does</h2>
+      <p>
+        With our unique parallax tech, you can turn flat images into layered, scroll-reactive visuals. Upload an image, set your layers, and export ready-to-use HTML/CSS — simple as that.
+      </p>
+    </div>
+
+    <div class="content-item">
+      <h2>🎯 Why We Built It</h2>
+      <p>
+        We wanted something that makes sites feel more alive, but without the complexity. Designers and developers can both use it — or just anyone who wants to make something cool.
+      </p>
+    </div>
+
+    <div class="content-item">
+      <h2>🚀 Still Cooking</h2>
+      <p>
+        We're actively adding new features, smoothing the UX, and fine-tuning the export experience. Got feedback? We’d love to hear it!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    border-radius: 20px;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .intro:hover {
+    transform: scale(1.04);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-item {
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced gap between heading and paragraph */
+  }
+
+  .content-item:hover {
+    transform: scale(1.04);
+  }
+
+  .content-item h2 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 0.3rem; /* Reduced margin between h2 and p */
+  }
+
+  .content-item p {
+    margin-top: 0; /* Removed margin-top for tighter spacing */
+    line-height: 1.6;
+    color: #444;
+  }
+
+  @media (max-width: 600px) {
     .about {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(135deg, #c4a7ff, #fad0c4);
-      border-radius: 15px;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-      color: #d065ed;
-      animation: fadeIn 1s ease-in-out;
+      padding: 1.5rem;
     }
-  
+
     h1 {
-      font-size: 2.5rem;
-      color: #fff;
+      font-size: 2rem;
     }
-  
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
+
+    .content-item h2 {
+      font-size: 1.3rem;
     }
-  
-    h2 {
-      margin-top: 1.5rem;
-      font-size: 1.8rem;
-    }
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-  
-    li {
-      font-size: 1.1rem;
-      padding: 0.5rem 0;
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    li:hover {
-      transform: scale(1.05);
-    }
-  
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  }
+</style>
