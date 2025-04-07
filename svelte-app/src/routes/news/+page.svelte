@@ -91,6 +91,7 @@
       text-align: left;
       transition: transform 0.3s ease;
       overflow: hidden;
+      border: 2px solid #4b0082;
     }
   
     .card:hover {
