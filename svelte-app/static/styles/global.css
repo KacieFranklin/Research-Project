@@ -234,29 +234,37 @@ a.form-submit {
 }
 
 li.tool-icon {
-    width:25%;
-    max-width:fit-content;
+    width:100%;
     padding-left: 25px;
     padding-right: 25px;
     border: 5px dashed var(--special-color);
     display:block;
     background-color: var(--primary-color);
     position: relative;
-    left:600px;
     margin-top: 20px;
     box-shadow:1px 1px 10px rgb(240, 128, 240);
 }
 
 li.tool-icon:hover{
     box-shadow:1px 1px 40px rgb(240, 128, 240);
-   
 }
 
-.information-tools {
-    display:flex;
-    left:90%;
-    background-color: var(--primary-color);
+div.information-tools {
+    display:block;
+    background-color: #0000;
+    position:absolute;
+    left:10%;
+    width:80%;
+    height:195vh;
+}
 
+div:has(ul li.tool-icon:hover) {
+    background-color: var(--primary-color);
+}
+
+ul.nested-list {
+    position:absolute;
+    right:20px;
 }
 
 /*
