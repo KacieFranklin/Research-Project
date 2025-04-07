@@ -28,7 +28,8 @@
         expanded: false
       }
     ];
-  
+
+    /** @param {number}index */
     function togglePost(index) {
       posts[index].expanded = !posts[index].expanded;
     }
