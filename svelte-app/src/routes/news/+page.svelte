@@ -143,7 +143,7 @@ h1 {
   opacity: 0.8;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .blog {
     padding: 1.2rem;
   }
