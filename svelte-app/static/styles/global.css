@@ -249,7 +249,16 @@ li.tool-icon {
 
 li.tool-icon:hover{
     box-shadow:1px 1px 40px rgb(240, 128, 240);
+   
 }
+
+.information-tools {
+    display:flex;
+    left:90%;
+    background-color: var(--primary-color);
+
+}
+
 /*
 .Tool-shortcut {
     float: inline-start;
