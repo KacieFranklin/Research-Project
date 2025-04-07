@@ -9,7 +9,7 @@
 <section class="about" in:fade={{ duration: 400 }}>
   <h1>👋 About Us</h1>
   <p class="intro">
-    We're building a tool that helps you make super clean, animated visuals for your website — without needing to code a thing.
+    We're building a tool that helps you make super clean, visuals for your website — without needing to code a thing.
   </p>
 
   <div class="content">
