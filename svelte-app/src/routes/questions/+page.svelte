@@ -8,7 +8,7 @@
     const faqs = [
       {
         question: 'What is this tool for?',
-        answer: 'It helps you create, parallax-style images for your website with minimal effort — no coding needed.',
+        answer: 'It helps you create parallax-style images for your website with minimal effort — no coding needed.',
       },
       {
         question: 'Do I need to know how to code?',
