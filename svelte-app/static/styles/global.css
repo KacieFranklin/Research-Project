@@ -88,7 +88,6 @@ a:hover{
 
 #tos-text{
     width: 90%;
-    max-width:800px;
     height: calc(100vh - 110px);
     max-height:fit-content;
     overflow-y: scroll;
@@ -170,6 +169,11 @@ a.form-submit {
         nav::-webkit-scrollbar-thumb:hover, div::-webkit-scrollbar-thumb:hover {
             background-image: linear-gradient(#0000, #0000 10%, var(--special-color) 10%, var(--special-color) 90%, #0000 90%, #0000);
         }
+    } 
+
+    #tos-text{
+        top: 80px;
+        right:5%;
     }
 }
 
@@ -218,6 +222,11 @@ a.form-submit {
         display: flex;
         background:var(--primary-color);
     }
+
+    #tos-text{
+        top: 80px;
+        right:5%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -233,5 +242,52 @@ a.form-submit {
     margin-top: 2rem;
 }
 
+li.tool-icon {
+    width:100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 5px dashed var(--special-color);
+    display:block;
+    background-color: var(--primary-color);
+    position: relative;
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
 
+li.tool-icon:hover{
+    box-shadow:1px 1px 40px rgb(240, 128, 240);
+}
 
+div.information-tools {
+    display:block;
+    background-color: #0000;
+    position:absolute;
+    left:10%;
+    width:80%;
+    height:195vh;
+}
+
+div:has(ul li.tool-icon:hover) {
+    background-color: var(--primary-color);
+}
+
+ul.nested-list {
+    position:absolute;
+    right:20px;
+}
+
+/*
+.Tool-shortcut {
+    float: inline-start;
+    position: relative;
+    bottom: 1110px;
+    left:850px;
+    border: 5px dashed var(--special-color);
+    display:inline;
+    background-color: var(--primary-color);
+    margin-block: 20px;
+    margin-right: 30px;
+    max-width: 25%;
+    vertical-align:top;
+}
+*/
