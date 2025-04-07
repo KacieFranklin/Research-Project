@@ -243,12 +243,14 @@ a.form-submit {
 }
 
 li.tool-icon {
-    width:100%;
+    width:25%;
+    max-width: fit-content;
     padding-left: 25px;
     padding-right: 25px;
     border: 5px dashed var(--special-color);
     display:block;
     background-color: var(--primary-color);
+    left:30%;
     position: relative;
     margin-top: 20px;
     box-shadow:1px 1px 10px rgb(240, 128, 240);
@@ -258,24 +260,21 @@ li.tool-icon:hover{
     box-shadow:1px 1px 40px rgb(240, 128, 240);
 }
 
-div.information-tools {
+.information-tools {
+    width:25%;
+    max-width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding: 50px;
+    border: 5px dashed var(--special-color);
     display:block;
-    background-color: #0000;
-    position:absolute;
-    left:10%;
-    width:80%;
-    height:195vh;
-}
-
-div:has(ul li.tool-icon:hover) {
     background-color: var(--primary-color);
+    left:50%;
+    height:195vh;
+    position:relative;
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
 }
-
-ul.nested-list {
-    position:absolute;
-    right:20px;
-}
-
 /*
 .Tool-shortcut {
     float: inline-start;

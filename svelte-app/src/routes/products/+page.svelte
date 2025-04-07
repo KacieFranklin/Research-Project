@@ -6,8 +6,7 @@
 <p>Below shows the key binds for each tool as well as a small description on what the tools do. Feel free to change them to fit your preferences when using the Drawing Tool!</p>
 <a href="/home">Home</a><br>
 
-<div class="information-tools">
-    <ul class="nested-list">
+    <ul>
         <li class="tool-icon">
             <img  src="brush.png" alt="Brush tool" width="200px" height="220px">
             <h2 class="tool-shortcut">Brush: Shift + B</h2>
@@ -29,7 +28,30 @@
             <h2 class="tool-shortcut">Cut: Shift + C</h2>
         </li>
     </ul>
-</div>
+
+    <ul>
+        <li class="information-tools">
+            <h2>Brush Tool</h2>
+            <p>Can be used to draw.</p>
+        </li>
+        <li class="information-tools">
+            <h2>Eraser Tool</h2>
+            <p>Will erase parts of the drawing on the selected layer.</p>
+        </li>
+        <li class="information-tools">
+            <h2>Lasso Tool</h2>
+            <p>Can be used to select parts of the drawing on a selected layer.</p>
+        </li>
+        <li class="information-tools">
+            <h2>Drag Tool</h2>
+            <p>Can be used to draw parts of the drawing around.</p>
+        </li>
+        <li class="information-tools">
+            <h2>Cut Tool</h2>
+            <p>Will cut out a part of the drawing after using the lasso tool.</p>
+        </li>
+    </ul>
+
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
