@@ -122,6 +122,51 @@ a.form-submit {
     left: 1rem;
 }
 
+ul.tool-list {
+    position: absolute;
+    left:80%;
+    width:60%;
+}
+
+ul.tool-list li {
+    display:flex;
+}
+
+ul.tool-list li div.tool-icon {
+    position:relative;
+    width:50%;
+    padding-left: 15px;
+    padding-right: 25px;
+    border: 5px dashed var(--special-color);
+    display:block;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
+
+ul.tool-list li div.tool-info {
+    display:none;
+    position:relative;
+    width:50%;
+    height:fit-content;
+    padding-left: 25px;
+    padding-right: 40px;
+    border: 5px dashed var(--special-color);
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
+
+ul.tool-list li:has(div:hover) div.tool-info {
+    display:block;
+}
+
+ul.tool-list li div:hover{
+    box-shadow:1px 1px 40px rgb(240, 128, 240);
+}
+
+
+
 @media  (min-width: 769px) {
     
     nav {
@@ -175,16 +220,102 @@ a.form-submit {
         top: 80px;
         right:5%;
     }
+
+    ul.tool-list {
+        position: absolute;
+        left:30%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        max-width: fit-content;
+        width:80%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:none;
+        position:relative;
+        width:50%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
 }
 
 @media (max-width: 1200px) {
+    ul.tool-list {
+        position: absolute;
+        left:30%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:50%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:none;
+        position:relative;
+        width:50%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
 
 }
 
 @media (max-width: 992px) {    
     ul.tool-list {
         position: absolute;
-        left:20%;
+        left:25%;
         width:60%;
     }
 
@@ -229,9 +360,6 @@ a.form-submit {
 
 @media (max-width: 768px) 
 {  
-    ul.tool-list {
-        display:none;
-    }
     nav {
         position: fixed;
         top:0px;
@@ -271,10 +399,94 @@ a.form-submit {
         top: 80px;
         right:5%;
     }
+
+    ul.tool-list {
+        position: absolute;
+        left:20%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:70%;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:block;
+        position:relative;
+        width:100%;
+        height:fit-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
 }
 
 @media (max-width: 576px) {
+    ul.tool-list {
+        position: absolute;
+        left:15%;
+        width:60%;
+    }
 
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:80%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:block;
+        position:relative;
+        width:80%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
 }
 
 .gallery {
