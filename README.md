@@ -36,6 +36,8 @@ I mainly contributed to the About page, Terms of Service page and the Products a
 I had also created the brush, eraser, lasso, drag and cut tool icons as well as adding the footer.
 It was a struggle learning Svelte at first, I wouldn't say I'm an expert at it, but I feel like I have a better understanding of it now.
 ### Robert-Iovu:
+I mainly did the about page, the blog/news page and the FAQ page. (Also the Parallax effect on the main page, if it does end up in the final website)
+It was a struggle to get used to using svelte however it does allow for everything to be less complex in terms of code, and while im not amazing at coding, i'd say that it does allow for quite great results
 ### Cialan Patterson:
 
 ## Deployment Notes:
