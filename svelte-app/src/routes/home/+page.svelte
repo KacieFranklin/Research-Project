@@ -2,30 +2,136 @@
     <title>Homepage</title>
 </svelte:head>
 
-<h1>Homepage</h1>
-<h2>Create Amazing Digital Effects</h2>
-<p>With our unique parallax technology you can create epic looking images for your website.<br></p>
-<h2>How Does it Work?</h2>
-<p>Visit our <a href="/questions">FAQ Page</a> to learn how the tool works<br></p>
-<p>And visit our <a href="/about">About section</a> to learn about us too<br></p>
-
-<!-- TEST -->
-<p>{data.sample}</p>
-
-<!-- temp button for debug -->
-<!--<button on:click={clearData}>Clear localStorage</button>--> 
-
 <script>
-    /** @type {import('./$types').PageProps} */
-    let { data } = $props();
-</script>
-
-<h1><br><a href="/dynamic">Start Drawing!</a><br></h1>
-<br><br><br>
-<canvas class="sample">{@html data.canvas}</canvas>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<p>there's text down here</p>
+    import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
+  
+    let container;
+  
+    let layers = [
+      { depth: 2, color: 'rgba(255, 230, 250, 0.2)', el: null },
+      { depth: 4, color: 'rgba(255, 190, 230, 0.25)', el: null },
+      { depth: 6, color: 'rgba(240, 180, 255, 0.3)', el: null },
+      { depth: 10, color: 'rgba(220, 160, 250, 0.35)', el: null },
+      { depth: 14, color: 'rgba(200, 140, 240, 0.4)', el: null },
+      { depth: 18, color: 'rgba(180, 120, 230, 0.45)', el: null },
+      { depth: 24, color: 'rgba(160, 100, 220, 0.5)', el: null },
+      { depth: 30, color: 'rgba(140, 80, 200, 0.55)', el: null }
+    ];
+  
+    function handleMouseMove(e) {
+      if (!container) return;
+      const rect = container.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+      const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+  
+      for (const layer of layers) {
+        if (layer.el) {
+          const moveX = -x * layer.depth * 30;
+          const moveY = -y * layer.depth * 30;
+          layer.el.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+        }
+      }
+    }
+  
+    function startDrawing() {
+      goto('/dynamic');
+    }
+  </script>
+  
+  <section class="parallax" bind:this={container} on:mousemove={handleMouseMove}>
+    {#each layers as layer}
+      <div
+        class="layer"
+        style="background-color: {layer.color};"
+        bind:this={layer.el}
+      />
+    {/each}
+  
+    <div class="hero-text">
+      <h1>Perseplax</h1>
+      <p>Create Without Code</p>
+      <button class="start-btn" on:click={startDrawing}>
+        Start Drawing
+      </button>
+    </div>
+  </section>
+  
+  <style>
+    .parallax {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #ffe6f0, #f5e4ff);
+    }
+  
+    .layer {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: 0;
+      left: 0;
+      filter: blur(100px);
+      border-radius: 50%;
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+      pointer-events: none;
+    }
+  
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+    }
+  
+    .hero-text h1 {
+      font-size: 4rem;
+      background: linear-gradient(90deg, #ff85c1, #c17dff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+  
+    .hero-text p {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  
+    .start-btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: linear-gradient(90deg, #ff85c1, #c17dff);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(200, 100, 255, 0.25);
+    }
+  
+    .start-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(200, 100, 255, 0.4);
+    }
+  
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+  
+      .hero-text p {
+        font-size: 1rem;
+      }
+  
+      .start-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  </style>
