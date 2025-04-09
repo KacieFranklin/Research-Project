@@ -4,8 +4,10 @@
 
 <script>
   import Parallax from "$lib/components/Parallax.svelte";
+  import Header from "$lib/components/Header.svelte";
 </script>
 
+<Header />
 <Parallax />
 
 

@@ -1,5 +1,5 @@
 <script>
-    import { Navigation, Footer, } from "$lib";
+    import { Header, Navigation, Footer, } from "$lib";
     let { children } = $props();
 
 </script>
@@ -9,6 +9,8 @@
 <a href="javascript:window.history.back()">Go Back</a>
 
 {@render children()}
+
+<Header />
 
 <header>
     <Navigation />
