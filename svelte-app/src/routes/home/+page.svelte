@@ -3,20 +3,31 @@
 </svelte:head>
 
 <script>
-    import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
   
     let container;
   
     let layers = [
-      { depth: 2, color: 'rgba(255, 230, 250, 0.2)', el: null },
-      { depth: 4, color: 'rgba(255, 190, 230, 0.25)', el: null },
-      { depth: 6, color: 'rgba(240, 180, 255, 0.3)', el: null },
-      { depth: 10, color: 'rgba(220, 160, 250, 0.35)', el: null },
-      { depth: 14, color: 'rgba(200, 140, 240, 0.4)', el: null },
-      { depth: 18, color: 'rgba(180, 120, 230, 0.45)', el: null },
-      { depth: 24, color: 'rgba(160, 100, 220, 0.5)', el: null },
-      { depth: 30, color: 'rgba(140, 80, 200, 0.55)', el: null }
+      {
+        depth: 2,
+        image: '/styles/background.png',
+        type: 'image',
+        z: 0,
+        el: null
+      },
+      { depth: 4, color: 'rgba(255, 190, 230, 0.25)', type: 'blur', z: 1, el: null },
+      { depth: 6, color: 'rgba(240, 180, 255, 0.3)', type: 'blur', z: 1, el: null },
+      {
+        depth: 10,
+        image: '/styles/paint.png',
+        type: 'image',
+        z: 2,
+        el: null
+      },
+      { depth: 14, color: 'rgba(200, 140, 240, 0.4)', type: 'blur', z: 1, el: null },
+      { depth: 18, color: 'rgba(180, 120, 230, 0.45)', type: 'blur', z: 1, el: null },
+      { depth: 24, color: 'rgba(160, 100, 220, 0.5)', type: 'blur', z: 1, el: null },
+      { depth: 30, color: 'rgba(140, 80, 200, 0.55)', type: 'blur', z: 1, el: null }
     ];
   
     function handleMouseMove(e) {
@@ -39,31 +50,48 @@
     }
   </script>
   
-  <section class="parallax" bind:this={container} on:mousemove={handleMouseMove}>
-    {#each layers as layer}
-      <div
-        class="layer"
-        style="background-color: {layer.color};"
-        bind:this={layer.el}
-      />
-    {/each}
+  <section class="parallax-wrapper">
+    <div class="parallax" bind:this={container} on:mousemove={handleMouseMove}>
+      {#each layers as layer}
+        {#if layer.type === 'image'}
+          <div
+            class="layer image"
+            style="background-image: url('{layer.image}'); z-index: {layer.z};"
+            bind:this={layer.el}
+          />
+        {:else if layer.type === 'blur'}
+          <div
+            class="layer blur"
+            style="background-color: {layer.color}; z-index: {layer.z};"
+            bind:this={layer.el}
+          />
+        {/if}
+      {/each}
   
-    <div class="hero-text">
-      <h1>Perseplax</h1>
-      <p>Create Without Code</p>
-      <button class="start-btn" on:click={startDrawing}>
-        Start Drawing
-      </button>
+      <div class="hero-text">
+        <h1>Perseplax</h1>
+        <p>Create Without Code</p>
+        <button class="start-btn" on:click={startDrawing}>
+          Start Drawing
+        </button>
+      </div>
     </div>
   </section>
   
   <style>
-    .parallax {
+    .parallax-wrapper {
       position: relative;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       overflow: hidden;
+    }
+  
+    .parallax {
+      position: relative;
+      width: 100%;
+      height: 100%;
       background: radial-gradient(circle at center, #ffe6f0, #f5e4ff);
+      overflow: hidden;
     }
   
     .layer {
@@ -72,11 +100,20 @@
       height: 120%;
       top: 0;
       left: 0;
-      filter: blur(100px);
-      border-radius: 50%;
       transition: transform 0.1s ease-out;
       will-change: transform;
       pointer-events: none;
+    }
+  
+    .blur {
+      filter: blur(100px);
+      border-radius: 50%;
+    }
+  
+    .image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   
     .hero-text {
