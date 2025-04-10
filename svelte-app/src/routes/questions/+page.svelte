@@ -26,7 +26,7 @@
   </script>
   
   <section class="faq" in:fade={{ duration: 400 }}>
-    <h1>❓ FAQ</h1>
+    <h1 class="faq-text">❓ FAQ</h1>
     <div class="faq-list">
       {#each faqs as item}
         <div class="faq-item">
@@ -42,13 +42,13 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
-      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      background: linear-gradient(135deg, #da88e0, #21213c);
       border-radius: 20px;
-      color: #333;
+      color: white;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
   
-    h1 {
+    .faq-text {
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 2rem;
@@ -79,14 +79,14 @@
     .faq-item h2 {
       font-size: 1.3rem;
       margin-bottom: 0.3rem;
-      color: #222;
+      color: white;
     }
   
     .faq-item p {
       margin: 0;
       font-size: 1rem;
       line-height: 1.6;
-      color: #444;
+      color:#526;
     }
   
     @media (max-width: 600px) {
