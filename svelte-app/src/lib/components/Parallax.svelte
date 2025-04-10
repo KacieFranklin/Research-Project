@@ -68,7 +68,11 @@
   
       <div class="hero-text">
         <h1>Perseplax</h1>
-        <p>Create Without Code</p>
+        <h2>Create Amazing Digital Effects</h2>
+          <p>With our unique parallax technology you can create epic looking images for your website.</p>
+          <h2>How Does it Work?</h2>
+          <p>Visit our <a href="/questions">FAQ Page</a> to learn how the tool works</p>
+          <p>And visit our <a href="/about">About section</a> to learn about us too</p>
         <button class="start-btn" on:click={startDrawing}>
           Start Drawing
         </button>
@@ -184,7 +188,7 @@
       }
 
       .hero-text p {
-        font-size: 2rem;
+        font-size: 1rem;
       }
 
       .start-btn {

@@ -25,7 +25,6 @@
             <span><a href="/products">Products and Services</a></span>
             <span><a href="/questions">FAQ</a></span>
             <span><a href="/404-error">4̷͈̚0̶̩̫͂͝4̶̯̽̈́ͅ-̷̛͎̃p̸͔͒ḁ̴̢̉̋g̵͔̏e̵͙̣̽̐</a></span>
-            <span><button onclick={deleteData}>Delete Data</button></span>
         </ul>
     </div>
 </nav>

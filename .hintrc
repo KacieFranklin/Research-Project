@@ -8,7 +8,8 @@
       {
         "ignore": [
           "-webkit-backdrop-filter",
-          "backdrop-filter"
+          "backdrop-filter",
+          "min-width: fit-content"
         ]
       }
     ]
