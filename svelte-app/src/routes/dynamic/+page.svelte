@@ -2,10 +2,11 @@
     <title>Drawing Tool</title>
 </svelte:head>
 
-<h1>This is the Main Page</h1>
+<script>
+    import DrawingTool from "$lib/components/DrawingTool.svelte";
+</script>
+
+
 <a href="/home">Home</a><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<p>text</p>
+
+<DrawingTool />
