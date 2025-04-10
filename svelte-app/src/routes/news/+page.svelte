@@ -7,9 +7,9 @@
   
     let posts = [
       {
-        title: "Introducing Parallax Magic 🎉",
+        title: "Introducing Perseplax 🎉",
         excerpt: "We just launched our tool! Here's what it does and why you'll love it.",
-        content: `Parallax Magic lets you turn flat images into layered, motion-powered visuals. Whether it's a landing page or product section, your site just got way cooler. No code needed—just upload, set your layers, and hit export.`,
+        content: `Perseplax lets you turn flat images into layered, motion-powered visuals. Whether it's a landing page or product section, your site just got way cooler. No code needed—just upload, set your layers, and hit export.`,
         date: "March 28, 2025",
         expanded: false
       },
@@ -66,7 +66,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  background: linear-gradient(135deg, #da88e0, #21213c);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   color: #fff;

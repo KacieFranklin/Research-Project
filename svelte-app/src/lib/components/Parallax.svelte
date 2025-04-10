@@ -1,6 +1,10 @@
 <script>
+// @ts-nocheck
     
     import { goto } from '$app/navigation';
+    /**
+	 * @type {HTMLDivElement}
+	 */
     let container;
   
     let layers = [
@@ -31,6 +35,7 @@
         if (layer.el) {
           const moveX = -x * layer.depth * 30;
           const moveY = -y * layer.depth * 30;
+          // @ts-ignore
           layer.el.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
         }
       }
@@ -42,20 +47,22 @@
 </script>
   
   <section class="parallax-wrapper">
-    <div class="parallax" bind:this={container} on:mousemove={handleMouseMove}>
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div class="parallax" bind:this={container} on:mousemove={handleMouseMove}></div>
       {#each layers as layer}
         {#if layer.type === 'image'}
+        
           <div
             class="layer image"
             style="background-image: url('{layer.image}'); z-index: {layer.z};"
-            bind:this={layer.el}
-          />
+            bind:this={layer.el}>
+          </div>
+    
         {:else if layer.type === 'blur'}
           <div
             class="layer blur"
             style="background-color: {layer.color}; z-index: {layer.z};"
-            bind:this={layer.el}
-          />
+            bind:this={layer.el}></div>
         {/if}
       {/each}
   
@@ -66,7 +73,6 @@
           Start Drawing
         </button>
       </div>
-    </div>
   </section>
   
   <style>
@@ -118,7 +124,7 @@
     .hero-text h1 {
       font-size: 4rem;
       background: linear-gradient(90deg, #21213c,  #ad37d4);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 5px 5px #da88e0;
       margin-bottom: 0.5rem;
@@ -150,16 +156,46 @@
   
     @media (max-width: 768px) {
       .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
       }
   
       .hero-text p {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
   
       .start-btn {
         font-size: 1rem;
         padding: 0.6rem 1.2rem;
       }
+
+      .layer {
+        width:fit-content;
+      }
     }
+
+    @media (max-width: 576px){
+      .layer{
+        width: 250%;
+        height: 150%;
+      }
+
+      .hero-text h1 {
+        font-size: 5rem;
+      }
+
+      .hero-text p {
+        font-size: 2rem;
+      }
+
+      .start-btn {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .layer {
+        width: 200%;
+      }
+    }
+
   </style>

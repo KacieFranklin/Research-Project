@@ -30,4 +30,16 @@
         width: 50px;
         margin: right 0.625em;
     }
+
+    @media (max-width: 576px) {
+        header{
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header {
+            visibility: hidden;
+        }
+    }
 </style>

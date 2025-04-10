@@ -41,9 +41,9 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    background: linear-gradient(135deg, #da88e0, #21213c);
     border-radius: 20px;
-    color: #333;
+    color:white;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   }
 
@@ -51,6 +51,7 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: white;
   }
 
   .intro {
@@ -83,14 +84,14 @@
 
   .content-item h2 {
     font-size: 1.5rem;
-    color: #222;
+    color: #da88e0;
     margin-bottom: 0.3rem; /* Reduced margin between h2 and p */
   }
 
   .content-item p {
     margin-top: 0; /* Removed margin-top for tighter spacing */
     line-height: 1.6;
-    color: #444;
+    color: white;
   }
 
   @media (max-width: 600px) {
