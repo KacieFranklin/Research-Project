@@ -6,9 +6,7 @@ const repoName = 'Research-Project';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			fallback: 'index.html'
-		}),
+		adapter: adapter(),
 		paths: {
 			base: dev ? '' : `/${repoName}`
 		},
