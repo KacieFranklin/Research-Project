@@ -8,7 +8,7 @@ It helps people who are making websites that want a parallax effect for their lo
 ## Audience:
 Perseplax is for anyone with an interest in art looking for a free program and for people making a website and wanting a parallax effect for their logo or background without needing to code it.
 
-## Live Site:
+## Live Site: [Perseplax]{https://kaciefranklin.github.io/Research-Project/}
 
 ## Design Rationale:
 We all have art as a common interest and believed it would be fun to create an art website that users can use for free to draw. As well as that, it would be effeciant for web developers to create a parallax effect with any images they need without having to code.
@@ -65,6 +65,7 @@ I struggled a lot to navigate the svelte documentation, so I mostly relied on va
 I would like to build a library of svelte components to reference or to have easier access to some open source svelte components that I could draw from.
 
 ## Deployment Notes:
+[Perseplax]{https://kaciefranklin.github.io/Research-Project/}
 
 We had some problems when trying to deploy our website. For instance, Git claiming there's no .noJekyll file and attempting to deploy the website with jekyll and failling to deploy because of it, even though a .nojekyll file was added. Another issue is when trying to use cp -r svelte-app/build/* ./, vs code claimed that there was no build folder. These are only two of the issues we encountered among a few others. 
 
