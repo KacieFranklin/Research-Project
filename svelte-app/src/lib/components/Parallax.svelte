@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-    
+    import { base } from '$app/paths';
     import { goto } from '$app/navigation';
     /**
 	 * @type {HTMLDivElement}
@@ -10,7 +10,7 @@
     let layers = [
       {
         depth: 2,
-        image: "Background.png",
+        image: "/Background.png",
         type: 'image',
         z: 0,
         el: null
@@ -18,7 +18,7 @@
       { depth: 4, color: 'rgba(255, 190, 230, 0.25)', type: 'blur', z: 1, el: null },
       {
         depth: 10,
-        image: "Paint.png",
+        image: "/Paint.png",
         type: 'image',
         z: 2,
         el: null
@@ -42,7 +42,7 @@
     }
   
     function startDrawing() {
-      goto('/dynamic');
+      goto(`${base}/dynamic`);
     }
 </script>
   
@@ -54,7 +54,7 @@
         
           <div
             class="layer image"
-            style="background-image: url('{layer.image}'); z-index: {layer.z};"
+            style="background-image: url('{base}{layer.image}'); z-index: {layer.z};"
             bind:this={layer.el}>
           </div>
     
@@ -71,8 +71,8 @@
         <h2>Create Amazing Digital Effects</h2>
           <p>With our unique parallax technology you can create epic looking images for your website.</p>
           <h2>How Does it Work?</h2>
-          <p>Visit our <a href="/questions">FAQ Page</a> to learn how the tool works</p>
-          <p>And visit our <a href="/about">About section</a> to learn about us too</p>
+          <p>Visit our <a href="{base}/questions">FAQ Page</a> to learn how the tool works</p>
+          <p>And visit our <a href="{base}/about">About section</a> to learn about us too</p>
         <button class="start-btn" on:click={startDrawing}>
           Start Drawing
         </button>

@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     let isOpen = false; // Menu state (open/closed)
     function toggleHamburger() {
         isOpen = !isOpen;
@@ -17,14 +18,13 @@
 
     <div class="hamburger-menu">
         <ul class:open={isOpen}>
-            <span><a href="/home">Home</a></span>
-            <span><a href="/about">About</a></span>
-            <span><a href="/contact">Contact Us</a></span>
-            <span><a href="/legal-info">Terms of Use</a></span>
-            <span><a href="/news">Blog/News</a></span>
-            <span><a href="/products">Products and Services</a></span>
-            <span><a href="/questions">FAQ</a></span>
-            <span><a href="/404-error">4̷͈̚0̶̩̫͂͝4̶̯̽̈́ͅ-̷̛͎̃p̸͔͒ḁ̴̢̉̋g̵͔̏e̵͙̣̽̐</a></span>
+            <span><a href="{base}/home">Home</a></span>
+            <span><a href="{base}/about">About</a></span>
+            <span><a href="{base}/contact">Contact Us</a></span>
+            <span><a href="{base}/legal-info">Terms of Use</a></span>
+            <span><a href="{base}/news">Blog/News</a></span>
+            <span><a href="{base}/products">Products and Services</a></span>
+            <span><a href="{base}/questions">FAQ</a></span>
         </ul>
     </div>
 </nav>

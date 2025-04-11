@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     export let title = "Card Title";
     export let link = "/error";
     export let photo = "/Placeholder.png";
@@ -6,7 +7,7 @@
 </script>
 
 <div class="card">
-    <img src={photo} alt="Placeholder">
+    <img src={base}{photo} alt="Placeholder">
     
     <div class="content">
         <h2><a href={link}>{title}</a></h2>

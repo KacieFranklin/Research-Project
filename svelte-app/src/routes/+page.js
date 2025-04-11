@@ -1,3 +1,4 @@
+export const ssr = false;
 import { base } from '$app/paths';
 import { goto } from '$app/navigation';
 

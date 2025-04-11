@@ -7,6 +7,5 @@
 </script>
 
 
-<a href="/home">Home</a><br>
 
 <DrawingTool />
