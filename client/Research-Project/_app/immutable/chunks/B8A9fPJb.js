@@ -1,0 +1,1 @@
+import{t as s,a as o}from"./-P2WpN9A.js";import"./Ca8wiLs2.js";var r=s('<header class="svelte-pn7dfx"><div class="logo svelte-pn7dfx"><img src="Logo.png" alt="Website Logo" class="svelte-pn7dfx"> <h1>Perseplax</h1></div></header>');function d(e){var a=r();o(e,a)}export{d as H};

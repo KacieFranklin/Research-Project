@@ -1,0 +1,534 @@
+:root {
+--primary-color: #21213c;
+--secondary-color: #b8b8db;
+--text-color: #e0e5e9;
+--text-dark: #100b07;
+--special-color: #ad37d4;
+--special-color-semi-trans: #ad37d4b0;
+--special-light: #da88e0;
+--special-dark: #526;
+--semi-transparent-div: #446d;
+--background-transition: teal;
+--background-dark: navy;
+--background-light: lightslategray;
+
+--font-family: 'Tenor Sans', sans-serif;
+--font-style: normal;
+--base-font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height:100vh;
+}
+
+canvas#sample {
+    width: 80%;
+    height: 40%;
+    position: relative;
+    border: 1px dashed black;
+    background-color: white;
+}
+
+body {
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    font-size: var(--base-font-size);
+    color:var(--text-color);
+    line-height: 1.5;
+}
+
+div#page-content {
+    display: block;
+    position:fixed;
+    text-align: center;
+    z-index:2;
+    height:100vh;
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:hidden scroll;
+    background-image: linear-gradient(165deg, var(--background-dark) 10%, var(--background-transition) 90%, var(--background-light));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display:block;
+    font-weight:100;
+}
+
+h1 {
+    font-size:36px;
+}
+
+h2 {
+    font-size:28px;
+}
+
+a {
+    color: var(--special-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--special-light);
+    text-decoration: underline;
+}
+
+.container{
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+#tos-text{
+    width: 90%;
+    height: calc(100vh - 110px);
+    max-height:fit-content;
+    overflow-y: scroll;
+    padding-bottom: 15px;
+    position: absolute;
+    top:60px;
+    right:5%;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+}
+
+a.form-submit {
+    padding: 1px 6px;
+    border-radius: 3px;
+    position:relative;
+    right:calc(calc-size(padding-right, size) - 50%);
+    top:15px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.burger {
+    display:none;
+    font-size: 2rem;
+    background:none;
+    border:none;
+    cursor:pointer;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+ul.tool-list {
+    position: absolute;
+    left:80%;
+    width:60%;
+}
+
+ul.tool-list li {
+    display:flex;
+}
+
+ul.tool-list li div.tool-icon {
+    position:relative;
+    width:50%;
+    padding-left: 15px;
+    padding-right: 25px;
+    border: 5px dashed var(--special-color);
+    display:block;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
+
+ul.tool-list li div.tool-info {
+    display:none;
+    position:relative;
+    width:50%;
+    height:fit-content;
+    padding-left: 25px;
+    padding-right: 40px;
+    border: 5px dashed var(--special-color);
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
+
+ul.tool-list li:has(div:hover) div.tool-info {
+    display:block;
+}
+
+ul.tool-list li div:hover{
+    box-shadow:1px 1px 40px rgb(240, 128, 240);
+}
+
+
+
+@media  (min-width: 769px) {
+    
+    nav {
+        overflow-x:scroll;
+        white-space:nowrap;
+        width:100%;
+        height:49px;
+        position:fixed;
+        top:0;
+        padding:10px 20px 5px 20px;
+        text-align:Right;
+        background-image: linear-gradient(var(--semi-transparent-div) 20%, var(--primary-color) 80%);
+        z-index:6;
+    }
+
+    nav span:not(:last-child) {
+        padding: 5px 5px 5px 0px;
+        border-right: solid black 1px;
+    }
+
+    @supports (scrollbar-color: auto) {
+        nav, div#page-content {
+            scrollbar-color:var(--special-color), #0000;
+        }
+    }
+
+    @supports selector(::-webkit-scrollbar) {
+        nav::-webkit-scrollbar{
+            height:10px;
+            width:10px;
+            background: #0000;
+        }
+        div::-webkit-scrollbar {
+            width:10px;
+            background-image: linear-gradient(#0000, var(--semi-transparent-div), var(--primary-color), var(--semi-transparent-div), #0000);
+        }
+
+        div::-webkit-scrollbar-button:start {
+            height:50px;
+        }
+        nav::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-image: linear-gradient(#0000, #0000 10%, var(--special-color-semi-trans) 10%, var(--special-color-semi-trans) 90%, #0000 90%, #0000);
+        }
+        nav::-webkit-scrollbar-thumb:hover, div::-webkit-scrollbar-thumb:hover {
+            background-image: linear-gradient(#0000, #0000 10%, var(--special-color) 10%, var(--special-color) 90%, #0000 90%, #0000);
+        }
+    } 
+
+    #tos-text{
+        top: 80px;
+        right:5%;
+    }
+
+    ul.tool-list {
+        position: absolute;
+        left:30%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        max-width: fit-content;
+        width:80%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:none;
+        position:relative;
+        width:50%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
+}
+
+@media (max-width: 1200px) {
+    ul.tool-list {
+        position: absolute;
+        left:30%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:50%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:none;
+        position:relative;
+        width:50%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
+
+}
+
+@media (max-width: 992px) {    
+    ul.tool-list {
+        position: absolute;
+        left:25%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:50%;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:none;
+        position:relative;
+        width:50%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
+}
+
+
+@media (max-width: 768px) 
+{  
+    nav {
+        position: fixed;
+        top:0px;
+        width:100%;
+        min-width: min-content;
+        height:max-content;
+        max-height: 40vh;
+    }
+    
+    .burger {
+        display:block;
+        left:90%;
+    }
+
+    .hamburger-menu ul {
+        display:none;
+        flex-direction: column;
+        position: relative;
+        top: 70px;
+        left: 65%;
+        text-align: center;
+        z-index:9;
+        width:30%;
+        min-width: fit-content;
+        height: 80vh;
+        max-height: fit-content;
+        padding: 1rem 5px 1rem 5px;
+        overflow-y: auto;
+    }
+
+    .hamburger-menu ul.open {
+        display: flex;
+        background:var(--primary-color);
+    }
+
+    #tos-text{
+        top: 80px;
+        right:5%;
+    }
+
+    ul.tool-list {
+        position: absolute;
+        left:20%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:70%;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:block;
+        position:relative;
+        width:100%;
+        height:fit-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
+}
+
+@media (max-width: 576px) {
+    ul.tool-list {
+        position: absolute;
+        left:15%;
+        width:60%;
+    }
+
+    ul.tool-list li {
+        display:flex;
+    }
+
+    ul.tool-list li div.tool-icon {
+        position:relative;
+        width:80%;
+        padding-left: 15px;
+        padding-right: 25px;
+        border: 5px dashed var(--special-color);
+        display:block;
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li div.tool-info {
+        display:block;
+        position:relative;
+        width:80%;
+        height:fit-content;
+        padding-left: 25px;
+        padding-right: 40px;
+        border: 5px dashed var(--special-color);
+        background-color: var(--primary-color);
+        margin-top: 20px;
+        box-shadow:1px 1px 10px rgb(240, 128, 240);
+    }
+
+    ul.tool-list li:has(div:hover) div.tool-info {
+        display:block;
+    }
+
+    ul.tool-list li div:hover{
+        box-shadow:1px 1px 40px rgb(240, 128, 240);
+    }
+}
+
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    color:var(--text-color);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+
+
+/*
+.information-tools {
+    width:25%;
+    max-width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding: 50px;
+    border: 5px dashed var(--special-color);
+    display:block;
+    background-color: var(--primary-color);
+    left:50%;
+    height:195vh;
+    position:relative;
+    margin-top: 20px;
+    box-shadow:1px 1px 10px rgb(240, 128, 240);
+}
+
+.Tool-shortcut {
+    float: inline-start;
+    position: relative;
+    bottom: 1110px;
+    left:850px;
+    border: 5px dashed var(--special-color);
+    display:inline;
+    background-color: var(--primary-color);
+    margin-block: 20px;
+    margin-right: 30px;
+    max-width: 25%;
+    vertical-align:top;
+}
+*/
