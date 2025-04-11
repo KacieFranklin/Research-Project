@@ -4,7 +4,6 @@
 
 <h1>This is the Products Page</h1>
 <p>Below shows the key binds for each tool as well as a small description on what the tools do. Feel free to change them to fit your preferences when using the Drawing Tool!</p>
-<a href="/home">Home</a><br>
 
 <ul class="tool-list">
     <li>

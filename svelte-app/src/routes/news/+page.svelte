@@ -2,7 +2,7 @@
     <title>Blog</title>
 </svelte:head>
 
-<a href="/home">Home</a><script>
+<script>
     import { fly, slide, fade } from 'svelte/transition';
   
     let posts = [

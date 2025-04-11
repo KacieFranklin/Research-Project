@@ -3,9 +3,12 @@
 </svelte:head>
 
 <script>
+    import { base } from '$app/paths';
+    import { goto } from '$app/navigation';
+
     function acceptForm(){
         localStorage.setItem("account-info","first-visit");
-        window.location.href = "/home";
+        goto(`${base}/home`);
     }
 </script>
 

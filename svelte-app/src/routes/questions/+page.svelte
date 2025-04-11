@@ -2,7 +2,7 @@
     <title>FAQ</title>
 </svelte:head>
 
-<a href="/home">Home</a><script>
+<script>
     import { fade } from 'svelte/transition';
   
     const faqs = [
