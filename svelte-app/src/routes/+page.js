@@ -1,15 +1,17 @@
+import { base } from '$app/paths';
+import { goto } from '$app/navigation';
+
 /** @type {import('./$types').PageLoad} */
 export function load(){
     const login = localStorage.getItem("account-info");
-    let redirect_link = "/legal-info"
     if (login){
         if (login == "first-visit") {
             localStorage.setItem("account-info", "returning");
-            redirect_link = "/home";
+            goto(`${base}/home`);
         }
         else {
-            redirect_link = "/dynamic";
+            goto(`${base}/dynamic`);
         }
     }
-    window.location.href = redirect_link;
+    goto(`${base}/legal-info`);
 }
